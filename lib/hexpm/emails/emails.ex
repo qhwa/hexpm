@@ -64,6 +64,8 @@ defmodule Hexpm.Emails do
 
   defp source do
     host = Application.get_env(:hexpm, :email_host) || "hex.pm"
-    {"Hex.pm", "noreply@#{host}"}
+    name = Application.get_env(:hexpm, :email_sender) || "Hex.pm"
+    from = Application.get_env(:hexpm, :email) || "noreply@#{host}"
+    {name, from}
   end
 end

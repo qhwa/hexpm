@@ -28,6 +28,8 @@ config :hexpm,
   docs_url:     System.get_env("HEX_DOCS_URL"),
   cdn_url:      System.get_env("HEX_CDN_URL"),
 
+  email_sender: System.get_env("HEX_EMAIL_SENDER"),
+  email:        System.get_env("HEX_EMAIL"),
   email_host:   System.get_env("HEX_EMAIL_HOST"),
   ses_rate:     System.get_env("HEX_SES_RATE") || "1000",
 
